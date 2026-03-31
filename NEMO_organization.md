@@ -75,7 +75,7 @@ bican/
                         SEQUENCE_DIRECTORIES:296
 ```
 
-This document provides the entire NeMO human and mammalian brain atlas with the truncated sequence directories: nemo_tree_pruned.txt
+This document provides the entire NeMO human and mammalian brain atlas with the truncated sequence directories: [nemo_tree_pruned.txt](nemo_tree_pruned.txt)
 
 This document provides the entire NeMO human and mammalian brain atlas along with listed sequence directories.  
 
