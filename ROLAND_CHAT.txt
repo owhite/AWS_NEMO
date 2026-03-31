@@ -1,0 +1,28 @@
+ % ssh -N -L 8081:localhost:8081 igslambda-1.igs.umaryland.edu
+
+web browser:
+http://localhost:8081/api/search?entity_type=subject
+
+Entity Types:
+project
+grant
+collection
+subject
+sample
+file
+
+
+Example URLs:
+http://localhost:8081/api/search?q=basal+ganglia&entity_type=collection
+http://localhost:8081/api/search?q=Ecker&entity_type=collection
+http://localhost:8081/api/search?q=house+mouse&entity_type=subject
+http://localhost:8081/api/search?q=Ecker&entity_type=grant
+
+Terminal command to port forward (while on campus or connected to the VPN):
+ssh -N -L 8081:localhost:8081 lambda
+[3:36 PM]You can adjust page_size:
+http://localhost:8081/api/search?q=Ecker&entity_type=collection&page_size=30
+
+You can paginate through results like so:
+http://localhost:8081/api/search?q=Ecker&entity_type=collection&page_size=20&page=1
+http://localhost:8081/api/search?q=Ecker&entity_type=collection&page_size=20&page=2
