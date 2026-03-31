@@ -1,0 +1,29 @@
+# AWS_NEMO Configuration Example
+# Copy this file to config.yaml and fill in your values.
+
+aws:
+  region: us-east-1
+  # Optional: override default profile
+  # profile: default
+
+ec2:
+  instance_type: p3.2xlarge
+  ami_id: ami-xxxxxxxxxxxxxxxxx   # Deep Learning AMI or custom NeMo AMI
+  key_name: my-keypair
+  security_group_ids:
+    - sg-xxxxxxxxxxxxxxxxx
+  subnet_id: subnet-xxxxxxxxxxxxxxxxx
+  iam_instance_profile: NemoInstanceProfile
+
+nemo:
+  # Path to the NeMo training config (e.g., a .yaml from NeMo's examples/)
+  training_config: conf/training.yaml
+  # Docker image to use for NeMo (from NGC or your own ECR repo)
+  docker_image: nvcr.io/nvidia/nemo:23.10
+  # Local path (or S3 URI) for training data
+  data_path: s3://my-bucket/nemo-data/
+  # S3 path for saving checkpoints
+  checkpoint_path: s3://my-bucket/nemo-checkpoints/
+
+logging:
+  level: INFO
